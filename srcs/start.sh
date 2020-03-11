@@ -6,7 +6,7 @@
 #    By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/11 11:07:47 by dpiedra           #+#    #+#              #
-#    Updated: 2020/03/11 16:33:02 by dpiedra          ###   ########.fr        #
+#    Updated: 2020/03/11 16:56:25 by dpiedra          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,5 +19,5 @@ chown -R www-data /var/www
 chmod -R 755 /var/www
 
 #website directory
-mkdir /var/www/website
-touch /var/www/website/mysite.html
+mkdir /var/www/mysite
+touch /var/www/mysite/index.php
