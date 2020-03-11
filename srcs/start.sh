@@ -6,7 +6,7 @@
 #    By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/11 11:07:47 by dpiedra           #+#    #+#              #
-#    Updated: 2020/03/11 16:59:38 by dpiedra          ###   ########.fr        #
+#    Updated: 2020/03/11 17:07:34 by dpiedra          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,3 +21,7 @@ chmod -R 755 /var/www
 #website directory
 mkdir /var/www/mysite
 touch /var/www/mysite/index.php
+
+#setup Nginx 
+mkdir /etc/nginx/sites-enabled/default
+touch /etc/nginx/nginx.conf
