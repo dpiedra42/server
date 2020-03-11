@@ -6,7 +6,7 @@
 #    By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/11 11:07:35 by dpiedra           #+#    #+#              #
-#    Updated: 2020/03/11 14:02:13 by dpiedra          ###   ########.fr        #
+#    Updated: 2020/03/11 14:41:35 by dpiedra          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,5 +18,3 @@ RUN apt-get install -y wget
 RUN apt-get install -y nginx
 RUN apt-get install mariadb
 RUN apt-get install -y php7.3 php7.3-mysql php7.3-fpm php7.3-common php7.3-curl php7.3 php7.3-mbstring php7.3-xml php7.3-xmlrpc php7.3-gd
-
-
