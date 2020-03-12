@@ -6,7 +6,7 @@
 #    By: dpiedra <dpiedra@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/11 11:07:47 by dpiedra           #+#    #+#              #
-#    Updated: 2020/03/11 17:07:34 by dpiedra          ###   ########.fr        #
+#    Updated: 2020/03/11 17:21:40 by dpiedra          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,5 +23,4 @@ mkdir /var/www/mysite
 touch /var/www/mysite/index.php
 
 #setup Nginx 
-mkdir /etc/nginx/sites-enabled/default
-touch /etc/nginx/nginx.conf
+
