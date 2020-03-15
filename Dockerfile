@@ -9,3 +9,5 @@ RUN apt-get install -y php7.3 php7.3-mysql php7.3-fpm php7.3-common php7.3-curl 
 
 COPY /srcs/start.sh/ ./
 COPY /srcs/nginx.conf ./tmp/nginx.conf/
+
+CMD bash start.sh
