@@ -10,7 +10,7 @@ chmod -R 755 /var/www
 
 #SSL (self-signed)
 mkdir -p /etc/nginx/ssl
-openssl req -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out /etc/nginx/ssl/mysite.pem -keyout /etc/nginx/ssl/mysite.key -subj openssl req -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out /etc/nginx/ssl/monsupersite.pem -keyout /etc/nginx/ssl/monsupersite.key -subj "/C=FR/ST=Paris/L=Paris/O=Ecole 42/OU=dpiedra/CN=www.mysite.com"
+openssl req -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out /etc/nginx/ssl/mysite.pem -keyout /etc/nginx/ssl/mysite.key -subj "/C=FR/ST=Paris/L=Paris/O=Ecole 42/OU=dpiedra/CN=www.mysite.com"
 
 #setup Nginx 
 service nginx start
