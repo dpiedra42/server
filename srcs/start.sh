@@ -18,4 +18,4 @@ mv ./tmp/nginx.conf etc/nginx/sites-available/mysite
 cp etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/mysite
 
 #update changes
-service nginx reload
+service nginx restart
