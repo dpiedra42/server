@@ -14,8 +14,8 @@ openssl req -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out /etc/nginx/ssl/
 
 #setup Nginx 
 service nginx start
-mv ./tmp/setup-nginx.conf /etc/nginx/sites-available/mysite
-ln -s etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/mysite
+mv ./tmp/nginx.conf /etc/nginx/sites-available/mysite
+cp etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/mysite
 
 #update changes
 service nginx restart
