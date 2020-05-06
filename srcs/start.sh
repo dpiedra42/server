@@ -3,6 +3,8 @@ service mysql start
 
 #website directory
 mkdir -p /var/www/mysite
+touch /var/www/mysite/info.php
+echo "<?php phpinfo(); ?>" >> /var/www/mysite/info.php
 
 #change permissions 
 chown -R www-data /var/www
@@ -28,7 +30,7 @@ echo "FLUSH PRIVILEGES;" | mysql -u root
 service php7.3-fpm start
 mkdir /var/www/mysite/phpmyadmin
 wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz
-tar xvf phpMyAdmin-4.9.0.1-all-languages.tar.gz
+tar -xvf phpMyAdmin-4.9.0.1-all-languages.tar.gz --strip-components 1 -C /var/www/mysite/phpmyadmin
 mv ./tmp/phpmyadmin.config.php /var/www/mysite/phpmyadmin/config.inc.php
 
 #update changes
