@@ -33,6 +33,11 @@ wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-lang
 tar -xvf phpMyAdmin-4.9.0.1-all-languages.tar.gz --strip-components 1 -C /var/www/mysite/phpmyadmin
 mv ./tmp/phpmyadmin.config.php /var/www/mysite/phpmyadmin/config.inc.php
 
+#Wordpress
+mkdir -p /var/www/mysite/wordpress
+wget -c https://wordpress.org/latest.tar.gz
+tar -xvzf latest.tar.gz --strip-components 1 -C /var/www/mysite/wordpress
+
 #update changes
 service nginx restart
 service mysql restart
