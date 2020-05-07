@@ -7,8 +7,8 @@ touch /var/www/mysite/info.php
 echo "<?php phpinfo(); ?>" >> /var/www/mysite/info.php
 
 #change permissions 
-chown -R www-data /var/www
-chmod -R 755 /var/www
+chown -R www-data /var/www/*
+chmod -R 755 /var/www/*
 
 #SSL (self-signed)
 mkdir -p /etc/nginx/ssl
