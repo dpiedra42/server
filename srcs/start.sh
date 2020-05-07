@@ -37,6 +37,7 @@ mv ./tmp/phpmyadmin.config.php /var/www/mysite/phpmyadmin/config.inc.php
 mkdir -p /var/www/mysite/wordpress
 wget -c https://wordpress.org/latest.tar.gz
 tar -xvzf latest.tar.gz --strip-components 1 -C /var/www/mysite/wordpress
+mv /tmp/wp-config.php /var/www/mysite/wordpress
 
 #update changes
 service nginx restart
