@@ -2,6 +2,8 @@ FROM debian:buster
 LABEL maintainer="dpiedra@student.42.fr"
 
 RUN apt-get update
+RUN apt-get install nano
+RUN apt-get install -y procps
 RUN apt-get install -y wget
 RUN apt-get install -y nginx
 RUN apt-get install -y openssl
@@ -13,5 +15,4 @@ COPY ./srcs/nginx-conf.conf ./tmp/nginx-conf.conf
 COPY ./srcs/phpmyadmin.config.php ./tmp/phpmyadmin.config.php
 COPY ./srcs/wp-config.php ./tmp/wp-config.php
 
-#docker build -t server .
-# docker run -it -p 80:80 -p 443:443 server
+CMD bash start.sh
