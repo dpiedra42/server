@@ -19,11 +19,10 @@ mv /tmp/nginx-conf.conf /etc/nginx/sites-available/mysite
 ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/mysite
 
 #setup mysql
-echo "CREATE DATABASE wordpress;" | mysql -u root
-echo "CREATE USER 'dpiedra'@'localhost' IDENTIFIED BY 'root';" | mysql -u root
-echo "GRANT USAGE ON *.* TO 'dpiedra'@'localhost' IDENTIFIED BY 'root';" | mysql -u root
-echo "GRANT ALL privileges ON *.* TO 'dpiedra'@'localhost';" | mysql -u root
-echo "FLUSH PRIVILEGES;" | mysql -u root
+echo "CREATE DATABASE wordpress;" | mysql -u root --skip-password
+echo "GRANT ALL PRIVILEGES ON wordpress.* TO 'root'@'localhost' WITH GRANT OPTION;" | mysql -u root --skip-password
+echo "update mysql.user set plugin='mysql_native_password' where user='root';" | mysql -u root --skip-password
+echo "FLUSH PRIVILEGES;" | mysql -u root --skip-password
 
 #PHPmyadmin
 mkdir /var/www/mysite/phpmyadmin
