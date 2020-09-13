@@ -12,4 +12,5 @@ COPY ./srcs/nginx-conf.conf ./tmp/nginx-conf.conf
 COPY ./srcs/phpmyadmin.config.php ./tmp/phpmyadmin.config.php
 COPY ./srcs/wp-config.php ./tmp/wp-config.php
 
-CMD bash start.sh
+#docker build -t server .
+#docker run -it -p 80:80 -p 443:443 server
