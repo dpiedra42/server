@@ -6,7 +6,7 @@
 #    By: deannapiedra <deannapiedra@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/13 13:56:32 by deannapiedr       #+#    #+#              #
-#    Updated: 2020/09/13 14:01:56 by deannapiedr      ###   ########.fr        #
+#    Updated: 2020/09/15 10:33:22 by deannapiedr      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,5 +23,7 @@ COPY ./srcs/nginx-conf.conf ./tmp/nginx-conf.conf
 COPY ./srcs/phpmyadmin.config.php ./tmp/phpmyadmin.config.php
 COPY ./srcs/wp-config.php ./tmp/wp-config.php
 
+EXPOSE 80 443
+CMD bash start.sh
 #docker build -t server .
 #docker run -it -p 80:80 -p 443:443 server

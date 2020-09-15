@@ -39,3 +39,4 @@ mv /tmp/wp-config.php /var/www/mysite/wordpress
 #update changes
 service php7.3-fpm start
 service nginx start
+bash
